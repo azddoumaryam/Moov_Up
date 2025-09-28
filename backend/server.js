@@ -9,7 +9,7 @@ const app = express();
 
 // Autoriser tous les frontends locaux
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:3000"], // ajoute 5173
+  origin: ["http://localhost:5173", "http://localhost:3000", "https://clubmoovup.com", "https://www.clubmoovup.com"], // ajoute 5173
   credentials: true
 }));
 
