@@ -1,0 +1,54 @@
+```
+# ==========================
+# Node.js / Express
+# ==========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+*.out
+*.pid
+*.gz
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# ==========================
+# React (Frontend)
+# ==========================
+/build
+/.cache
+/dist
+/.parcel-cache
+/.next
+/out
+
+# Testing
+/coverage
+/.nyc_output
+
+# ==========================
+# Common IDE / OS
+# ==========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ==========================
+# Misc
+# ==========================
+*.tar.gz
+*.zip
+*.tmp
+```
