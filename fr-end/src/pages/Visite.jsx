@@ -42,7 +42,7 @@ const Visite = () => {
     setError(null);
 
     try {
-      const res = await fetch("http://localhost:4000/api/contact", {
+      const res = await fetch("https://159.69.81.212:4000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

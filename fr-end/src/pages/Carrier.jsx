@@ -39,7 +39,7 @@ const Carrier = () => {
         data.append(key, formData[key]);
       }
 
-      const res = await fetch("http://localhost:4000/api/candidates", {
+      const res = await fetch("https://159.69.81.212:4000/api/candidates", {
         method: "POST",
         body: data,
       });

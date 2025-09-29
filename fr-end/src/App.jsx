@@ -9,6 +9,7 @@ import Apropos from './pages/Apropos';
 import './styles/fonts.css';
 
 function App() {
+
   return (
     <>
       <Navbar />
