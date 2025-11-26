@@ -3,9 +3,21 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400&display=swap');
 @font-face {
-    font-family: 'Crospor';
-    src: url('./assets/font/Crospor.otf') format('opentype');
+    font-family: 'Renoric';
+    src: url('./assets/font/Renoric.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+  }
+  @keyframes slide {
+    0% {
+      left: -75%;
+    }
+    100% {
+      left: 125%;
+    }
+  }
+  
+  .animate-slide {
+    animation: slide 2s infinite;
   }
   

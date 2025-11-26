@@ -42,7 +42,7 @@ const Visite = () => {
     setError(null);
 
     try {
-      const res = await fetch("https://159.69.81.212:4000/api/contact", {
+      const res = await fetch("http://localhost:4000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -184,65 +184,85 @@ const Visite = () => {
         </div>
       </div>
 
-      {/* Map */}
-      <div className="w-full mt-12 mb-16">
-        <div className="flex justify-center mb-4">
-          <a
-            href={googleMapsLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white/20 px-5 py-2 rounded-lg text-white hover:bg-white/30 transition"
-          >
-            <MapPin className="w-5 h-5" />
-            Voir sur Google Maps
-          </a>
-        </div>
+    {/* Bloc Horaires + Contact (au-dessus de la map) */}
+{/* Bloc Horaires + Contact (style alternatif) */}
+<div className="py-12 bg-black text-gray-300 text-center">
+  <h2 className="text-3xl font-bold text-white mb-10 uppercase tracking-wide">
+    Informations du complexe
+  </h2>
 
-        <MapContainer
-          center={position}
-          zoom={17}
-          style={{ height: "40vh", width: "100%" }}
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution="© OpenStreetMap"
-          />
-          <Marker position={position}>
-            <Popup>
-              📍 <b>Moov Up Power Gym</b>
-              <br />
-              Weekdays: 06:00 - 22:00
-              <br />
-              Saturday: 08:00 - 20:00
-              <br />
-              Sunday: 10:00 - 14:00
-            </Popup>
-          </Marker>
-        </MapContainer>
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4 text-gray-300">
+  {/* Horaires */}
+  <div className="flex flex-col items-start p-6 border border-gray-700 rounded-xl hover:bg-gray-900 transition">
+    <h3 className="text-xl font-semibold text-white mb-2">Horaires d’ouverture</h3>
+    <p className="mb-1">Du lundi au vendredi : 06h30 – 21h00</p>
+    <p className="mb-1">Samedi : 09h00 – 20h00</p>
+    <p>Jours fériés : 09h00 – 18h00</p>
+  </div>
 
-        <div className="mt-8 text-center space-y-3">
-          <div className="flex justify-center gap-6 text-lg text-gray-300 mt-3">
-            <p>
-              Email :{" "}
-              <a
-                href="mailto:clubmoovup@gmail.com"
-                className="text-white font-sans hover:underline"
-              >
-                clubmoovup@gmail.com
-              </a>
-            </p>
-            <p>
-              Téléphone :{" "}
-              <a
-                href="tel:0528230011"
-                className="text-white font-sans hover:underline"
-              >
-                05282-30011
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
+  {/* Email */}
+  <div className="flex flex-col items-start p-6 border border-gray-700 rounded-xl hover:bg-gray-900 transition">
+    <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+    <a
+      href="mailto:clubmoovup@gmail.com"
+      className="text-gray-200 hover:text-white hover:underline"
+    >
+      clubmoovup@gmail.com
+    </a>
+  </div>
+
+  {/* Téléphone */}
+  <div className="flex flex-col items-start p-6 border border-gray-700 rounded-xl hover:bg-gray-900 transition">
+    <h3 className="text-xl font-semibold text-white mb-2">Téléphone</h3>
+    <a
+      href="tel:0528230011"
+      className="text-gray-200 hover:text-white hover:underline"
+    >
+      05282-30011
+    </a>
+  </div>
+</div>
+
+</div>
+
+
+{/* Map */}
+<div className="w-full mb-16">
+  <div className="flex justify-center mb-4">
+    <a
+      href={googleMapsLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 bg-white/20 px-5 py-2 rounded-lg text-white hover:bg-white/30 transition"
+    >
+      <MapPin className="w-5 h-5" />
+      Voir sur Google Maps
+    </a>
+  </div>
+
+  <MapContainer
+    center={position}
+    zoom={17}
+    style={{ height: "40vh", width: "100%" }}
+  >
+    <TileLayer
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      attribution="© OpenStreetMap"
+    />
+    <Marker position={position}>
+      <Popup>
+        📍 <b>Moov Up Power Gym</b>
+        <br />
+        Weekdays: 06:00 - 22:00
+        <br />
+        Saturday: 08:00 - 20:00
+        <br />
+        Sunday: 10:00 - 14:00
+      </Popup>
+    </Marker>
+  </MapContainer>
+</div>
+
     </div>
   );
 };

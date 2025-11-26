@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        crospor: ['Crospor', 'sans-serif'], // Fallback to sans-serif
+        renoric: ['Renoric', 'sans-serif'], // Fallback to sans-serif
+        bebas: ["Bebas Neue", "sans-serif"],
       },
       keyframes: {
         slideUp: {
