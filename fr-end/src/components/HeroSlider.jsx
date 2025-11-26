@@ -6,7 +6,7 @@ export default function HeroSlider() {
     {
       key: "application",
       title: "TELECHARGER L'APPLICATION",
-      image: "/img-app.png",
+      image: "/Mockup-01.png",
       overlayFrom: "from-gray-900/80",
       headingFrom: "from-gray-200",
       theme: "gray",
@@ -50,7 +50,7 @@ export default function HeroSlider() {
     {
       key: "application",
       title: "TELECHARGER L'APPLICATION",
-      image: "/img-app.png",
+      image: "/Mockup-01.png",
       overlayFrom: "from-gray-900/80",
       headingFrom: "from-gray-200",
       theme: "gray",
@@ -94,7 +94,7 @@ export default function HeroSlider() {
     {
       key: "application",
       title: "TELECHARGER L'APPLICATION",
-      image: "/img-app.png",
+      image: "/Mockup-01.png",
       overlayFrom: "from-gray-900/80",
       headingFrom: "from-gray-200",
       theme: "gray",
