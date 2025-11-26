@@ -4,7 +4,7 @@ const Planning = ({
   bgImagePath = '/planning.jpg',
   pdfs = [
     '/planning lady rentree.pdf',
-    '/planning men rentree.pdf',
+    '/Planning men rentree.pdf',
     '/planning kids rentree.pdf',
   ],
 }) => {
